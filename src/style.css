@@ -322,8 +322,7 @@ min-width: 40%;
   background-size: 200px 50px;
 }
 
-.imgDetail-container,
-.Searh_Container {
+.imgDetail-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -397,6 +396,10 @@ padding: 15px 5px;
   height: 50px;
   padding: 15px;
   font-size: 16px;
+}
+
+input::placeholder {
+    color: #ccc;
 }
 .btn-comment{
   background-color: transparent !important;
