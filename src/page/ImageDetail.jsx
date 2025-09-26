@@ -206,10 +206,21 @@ export default function Main() {
 
             <div className="detail-section">
               <div className="btn-left-section">
-                <a href={image.largeImageURL} className="btn" download target="_blank" rel="noreferrer">
-                  Download
-                </a>
-              </div>
+                  <button
+                    className="btn"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = image.largeImageURL;
+                      link.download = 'image.jpg';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    Download
+                  </button>
+                </div>
+
 
               <div className="flex">
                 <p className="btn-grey"> ❤️ {image.likes}</p>
